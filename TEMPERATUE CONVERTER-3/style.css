@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  --color: rgb(14, 15, 6);
+  --color2: rgb(251, 249, 249);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(6, 6, 6);
+  font-size: 20px;
+  background-image: url('Nature.jpg'); 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center; 
+  height: 100vh; 
+  width: 100vw; 
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+h1:hover {
+  color: hsl(60, 70%, 40%); 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#temperature {
+  margin-top: 20px; 
+}
+
+#temperature input {
+  width: 250px; 
+  padding: 15px; 
+  height: 60px;
+  font-size: 24px; 
+  border-radius: 10px; 
+  border: 2px solid var(--color); 
+  text-align: center; 
+  box-shadow: 3px 3px 10px var(--color); 
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s; 
+  margin-bottom: 20px; 
+}
+
+#temperature input:hover {
+  background-color: var(--color2); 
+  color: var(--color);
+  box-shadow: 3px 3px 10px var(--color2); 
+}
+
+.temperature-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px; 
+  margin-top: 40px; 
+}
+
+.temp-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temp-box input {
+  width: 200px;
+  padding: 10px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--color);
+  text-align: center;
+  box-shadow: 3px 3px 10px var(--color);
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.temp-box .icon {
+  font-size: 30px;
+  font-weight: bold;
+  color: hsl(41, 79%, 47%);
+  margin-top: 5px;
+}
+
+.temp-box input:hover {
+  background-color: var(--color2);
+  color: var(--color); 
+  box-shadow: 3px 3px 10px var(--color2); 
+}
+
+.result {
+  margin: 10px 0 50px;
+  font-size: 26px;
+  color: hsl(41, 79%, 47%);
+  letter-spacing: 1px;
+  height: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  margin: 30px 0;
+  padding: 10px 30px;
+  background: none;
+  border: 2px solid var(--color);
+  border-radius: 5px;
+  color: var(--color2);
+  font-size: 25px;
+  transition: color 0.3s, box-shadow 0.3s, background-color 0.3s; 
+  box-shadow: 3px 3px 10px var(--color);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--color);
+  box-shadow: 3px 3px 10px var(--color2);
+}
+
+
+.slider-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px; 
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 10px var(--color);
+}
+
+.slider-container .slide {
+  min-width: 200px;
+  height: 150px;
+  background-color: var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+
+@media screen and (max-width: 500px) {
+  .temperature-container {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .slider-container {
+    flex-direction: column; 
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  button {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}
